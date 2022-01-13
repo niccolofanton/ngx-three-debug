@@ -1,0 +1,14 @@
+<th-canvas  style="min-height: 100vh;" (onRender)="this.onBeforeRender()">
+    <th-scene [background]="'black' | color">
+
+        <th-object3D loadGLTF [position]="[0, 1, 0]" [scale]="[130,130, 130]" [url]="avocadoPath">
+        </th-object3D>
+
+        <th-ambientLight> </th-ambientLight>
+
+        <th-perspectiveCamera [args]="[45, 2, 0.1, 100]" [position]="[0, 8, 30]">
+            <th-orbitControls #controls [autoRotate]="true" [autoRotateSpeed]="10"></th-orbitControls>
+        </th-perspectiveCamera>
+
+    </th-scene>
+</th-canvas>
